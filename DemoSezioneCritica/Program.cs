@@ -6,6 +6,7 @@ namespace DemoSezioneCritica
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
