@@ -27,14 +27,14 @@ namespace DemoSezioneCritica
                     {
                         ba.Withdraw(100);
                     }
-                }));
-
-                Task.WaitAll(Tasks.ToArray());
-
-                Console.WriteLine($"Final balanvce is {ba.Balance}.");
-
-                Console.ReadLine();
+                }));               
             }
+
+            Task.WaitAll(Tasks.ToArray());
+
+            Console.WriteLine($"Final balanvce is {ba.Balance}.");
+
+            Console.ReadLine();
         }
     }
 }

@@ -6,14 +6,21 @@ namespace DemoSezioneCritica
 {
     public class BankAccount
     {
+        public object padlock = new object();
         public int Balance { get; private set; }
         public void Deposit(int Amount)
         {
-            Balance += Amount;
+            lock (padlock)
+            {
+                Balance += Amount;
+            }           
         }
         public void Withdraw(int Amount)
         {
-            Balance -= Amount;
+            lock (padlock)
+            {
+                Balance -= Amount;
+            }
         }
     }
 }
